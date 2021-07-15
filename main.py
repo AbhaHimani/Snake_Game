@@ -35,11 +35,12 @@ while game_is_on:
         game_is_on=False
         Scoreboard.Game_Over()
     for segment in snake.segments:
-            if segment != snake.head:
-
-             if snake.head.distance(segment) < 10:
+            if segment != snake.head and snake.head.distance(segment) < 10:
               game_is_on=False
               Scoreboard.Game_Over()
+            Scoreboard.reset()
+
+
 
 screen.exitonclick()
 
